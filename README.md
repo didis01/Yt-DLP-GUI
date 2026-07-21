@@ -28,9 +28,9 @@ Una interfaz gráfica moderna para **yt-dlp**, desarrollada en Python con Tkinte
 
 ## Capturas
 
-| Pantalla principal | Descarga | Consola |
-|--------------------|----------|----------|
-| ![](docs/main.png) | ![](docs/download.png) | ![](docs/console.png) |
+| Pantalla principal |
+|--------------------|
+| ![](docs/main.png) |
 
 ---
 
