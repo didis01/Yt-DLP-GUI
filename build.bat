@@ -6,7 +6,6 @@ echo Creando Ejecutable Standalone para Windows (PyInstaller)
 echo ======================================================
 echo.
 
-:: Verify if Python is installed
 where python >nul 2>nul
 if %errorlevel% neq 0 (
     echo [ERROR] No se ha encontrado Python en el sistema.
@@ -17,20 +16,20 @@ if %errorlevel% neq 0 (
     exit /b 1
 )
 
-echo [1/3] Instalando dependencias necesarias (requests, pillow, pyinstaller)...
+echo [1/3] Instalando dependencias necesarias...
 python -m pip install --upgrade pip
-python -m pip install requests pillow pyinstaller
+python -m pip install -r requirements-build.txt
 
 echo.
-echo [2/3] Compilando aplicacion en un unico ejecutable standalone (.exe)...
-python -m PyInstaller --onefile --windowed --name "yt-dlp-gui" yt_downloader.py
+echo [2/3] Compilando aplicacion con PyInstaller...
+python -m PyInstaller --clean yt-dlp-gui.spec
 
 echo.
 if %errorlevel% eq 0 (
     echo [3/3] ¡Compilacion completada con exito!
-    echo El archivo executable standalone se encuentra en: dist\yt-dlp-gui.exe
+    echo El archivo ejecutable se encuentra en: dist\yt-dlp-gui.exe
     echo.
-    echo NOTA: La primera vez que abras el programa en Windows podria tardar 
+    echo NOTA: La primera vez que abras el programa en Windows podria tardar
     echo unos segundos en descomprimir el entorno Python autocontenido.
 ) else (
     echo [ERROR] Ocurrio un error durante la compilacion. Revisa el log superior.

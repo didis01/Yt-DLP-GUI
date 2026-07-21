@@ -10,8 +10,8 @@ if ! command -v python3 &> /dev/null; then
     exit 1
 fi
 
-echo "[1/3] Instalando dependencias necesarias (requests, pillow, pyinstaller)..."
-pip install --user --break-system-packages requests pillow pyinstaller
+echo "[1/3] Instalando dependencias necesarias..."
+pip install --user -r requirements-build.txt 2>/dev/null || pip install --user --break-system-packages -r requirements-build.txt
 
 echo
 echo "[2/3] Compilando aplicación con PyInstaller..."

@@ -12,9 +12,12 @@ Una interfaz gráfica moderna para **yt-dlp**, desarrollada en **Python** con **
 ## Características
 
 - Interfaz gráfica moderna con tema oscuro.
+- **Tres modos de descarga:** vídeo individual, playlist y búsqueda.
 - Análisis previo del contenido.
 - Vista previa mediante miniatura.
 - Información del vídeo (título, autor y duración).
+- Selección individual de vídeos en playlists.
+- Buscador integrado de vídeos (YouTube vía yt-dlp).
 - Descarga de vídeo y audio en múltiples formatos.
 - Extracción de audio.
 - Descarga e incrustación de subtítulos.
@@ -23,6 +26,24 @@ Una interfaz gráfica moderna para **yt-dlp**, desarrollada en **Python** con **
 - Consola integrada con la salida de **yt-dlp**.
 - Cancelación de descargas.
 - Actualización automática del ejecutable de **yt-dlp**.
+- Descarga automática de **yt-dlp** en el primer arranque si no está instalado.
+- Pantalla de aviso legal al iniciar la aplicación.
+
+---
+
+## Modos de descarga
+
+### Video
+
+Modo por defecto. Introduce la URL de un vídeo, analízalo y descárgalo con el formato deseado.
+
+### Playlist
+
+Introduce la URL de una playlist, analízala y selecciona qué vídeos descargar mediante casillas de verificación. Incluye botones para seleccionar o deseleccionar todos los vídeos.
+
+### Búsqueda
+
+Introduce un término de búsqueda para encontrar vídeos en YouTube. Selecciona un resultado de la lista para ver la vista previa y descargarlo.
 
 ---
 
@@ -65,11 +86,25 @@ Una interfaz gráfica moderna para **yt-dlp**, desarrollada en **Python** con **
 ### Requisitos del sistema
 
 - Python 3.10 o superior
-- FFmpeg
+- **FFmpeg** (obligatorio para extracción de audio, subtítulos y metadatos)
+
+> La aplicación comprueba la presencia de FFmpeg antes de iniciar descargas que lo requieran.
 
 ### Dependencias de Python
 
-Todas las dependencias necesarias pueden instalarse mediante el archivo `requirements.txt`.
+Dependencias de ejecución (`requirements.txt`):
+
+```bash
+pip install -r requirements.txt
+```
+
+Para compilar el ejecutable (`requirements-build.txt`):
+
+```bash
+pip install -r requirements-build.txt
+```
+
+> **Nota:** La aplicación utiliza el **binario** de yt-dlp (descargado automáticamente o disponible en el PATH), no el paquete Python de yt-dlp.
 
 ---
 
@@ -113,6 +148,8 @@ python3 yt_downloader.py
 python yt_downloader.py
 ```
 
+En el primer arranque, si yt-dlp no está instalado, la aplicación ofrecerá descargarlo automáticamente desde GitHub.
+
 ---
 
 ## Compilación
@@ -130,7 +167,7 @@ chmod +x build.sh
 build.bat
 ```
 
-Los scripts de compilación generan un ejecutable independiente utilizando **PyInstaller**.
+Los scripts de compilación generan un ejecutable independiente utilizando **PyInstaller** y el archivo `yt-dlp-gui.spec`.
 
 ---
 
@@ -148,13 +185,15 @@ Los scripts de compilación generan un ejecutable independiente utilizando **PyI
 
 ## Flujo de uso
 
-1. Introducir la URL del contenido.
-2. Analizar el enlace.
-3. Revisar la información obtenida.
-4. Seleccionar el formato de descarga.
-5. Elegir la carpeta de destino.
-6. Iniciar la descarga.
-7. Supervisar el progreso en tiempo real.
+1. Aceptar el aviso legal al iniciar.
+2. Elegir el modo: **Video**, **Playlist** o **Búsqueda**.
+3. Introducir la URL, la URL de playlist o el término de búsqueda.
+4. Analizar o buscar el contenido.
+5. Revisar la información obtenida (y seleccionar vídeos en modo playlist).
+6. Seleccionar el formato de descarga.
+7. Elegir la carpeta de destino.
+8. Iniciar la descarga.
+9. Supervisar el progreso en tiempo real.
 
 ---
 
