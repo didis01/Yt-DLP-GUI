@@ -15,7 +15,7 @@ pip install --user --break-system-packages requests pillow pyinstaller
 
 echo
 echo "[2/3] Compilando aplicación con PyInstaller..."
-python3 -m PyInstaller --onefile --windowed --name "yt-dlp-gui" yt_downloader.py
+python3 -m PyInstaller --clean yt-dlp-gui.spec
 
 if [ $? -eq 0 ]; then
     echo
