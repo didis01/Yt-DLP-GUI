@@ -1,6 +1,6 @@
 # Yt-DLP GUI
 
-Una interfaz gráfica moderna para **yt-dlp**, desarrollada en Python con Tkinter, que facilita la descarga de vídeo y audio desde plataformas compatibles mediante una experiencia de usuario intuitiva, sin necesidad de utilizar la línea de comandos.
+Una interfaz gráfica moderna para **yt-dlp**, desarrollada en **Python** con **Tkinter**, que facilita la descarga de vídeo y audio desde plataformas compatibles mediante una experiencia de usuario intuitiva, sin necesidad de utilizar la línea de comandos.
 
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)]()
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-4CAF50)]()
@@ -12,17 +12,17 @@ Una interfaz gráfica moderna para **yt-dlp**, desarrollada en Python con Tkinte
 ## Características
 
 - Interfaz gráfica moderna con tema oscuro.
-- Análisis de enlaces antes de iniciar la descarga.
+- Análisis previo del contenido.
 - Vista previa mediante miniatura.
-- Información del contenido (título, autor y duración).
+- Información del vídeo (título, autor y duración).
 - Descarga de vídeo y audio en múltiples formatos.
 - Extracción de audio.
 - Descarga e incrustación de subtítulos.
 - Incrustación de metadatos y miniaturas.
 - Monitorización del progreso en tiempo real.
-- Consola integrada con la salida de `yt-dlp`.
-- Cancelación de descargas en ejecución.
-- Actualización automática del ejecutable de `yt-dlp`. :contentReference[oaicite:1]{index=1}
+- Consola integrada con la salida de **yt-dlp**.
+- Cancelación de descargas.
+- Actualización automática del ejecutable de **yt-dlp**.
 
 ---
 
@@ -49,17 +49,27 @@ Una interfaz gráfica moderna para **yt-dlp**, desarrollada en Python con Tkinte
 - M4A
 - WAV
 
-Los perfiles de descarga utilizan automáticamente las opciones adecuadas de **yt-dlp** según el formato seleccionado. :contentReference[oaicite:2]{index=2}
+---
+
+## Compatibilidad
+
+| Sistema operativo | Estado |
+|-------------------|--------|
+| Windows | ✅ Compatible |
+| Linux | ✅ Compatible |
 
 ---
 
-## Requisitos
+## Dependencias
+
+### Requisitos del sistema
 
 - Python 3.10 o superior
-- yt-dlp
 - FFmpeg
-- Pillow
-- Requests
+
+### Dependencias de Python
+
+Todas las dependencias necesarias pueden instalarse mediante el archivo `requirements.txt`.
 
 ---
 
@@ -68,21 +78,18 @@ Los perfiles de descarga utilizan automáticamente las opciones adecuadas de **y
 Clonar el repositorio:
 
 ```bash
-git clone https://github.com/<usuario>/yt-dlp-gui.git
+git clone https://github.com/didis01/Yt-DLP-GUI.git
 
-cd yt-dlp-gui
+cd Yt-DLP-GUI
 ```
 
 Instalar las dependencias:
 
 ```bash
-pip install requests pillow
+pip install -r requirements.txt
 ```
 
-Instalar también:
-
-- yt-dlp
-- FFmpeg
+Instalar **FFmpeg** y asegurarse de que se encuentra disponible en el `PATH` del sistema.
 
 ---
 
@@ -106,8 +113,6 @@ python3 yt_downloader.py
 python yt_downloader.py
 ```
 
-El proyecto incluye un script de inicio para Linux. :contentReference[oaicite:3]{index=3}
-
 ---
 
 ## Compilación
@@ -116,11 +121,8 @@ El proyecto incluye un script de inicio para Linux. :contentReference[oaicite:3]
 
 ```bash
 chmod +x build.sh
-
 ./build.sh
 ```
-
-El script instala las dependencias necesarias y genera un ejecutable mediante **PyInstaller**.
 
 ### Windows
 
@@ -128,9 +130,11 @@ El script instala las dependencias necesarias y genera un ejecutable mediante **
 build.bat
 ```
 
+Los scripts de compilación generan un ejecutable independiente utilizando **PyInstaller**.
+
 ---
 
-## Tecnologías
+## Tecnologías utilizadas
 
 - Python
 - Tkinter
@@ -142,12 +146,12 @@ build.bat
 
 ---
 
-## Flujo de trabajo
+## Flujo de uso
 
-1. Introducir la URL.
-2. Analizar el contenido.
+1. Introducir la URL del contenido.
+2. Analizar el enlace.
 3. Revisar la información obtenida.
-4. Seleccionar el formato de salida.
+4. Seleccionar el formato de descarga.
 5. Elegir la carpeta de destino.
 6. Iniciar la descarga.
 7. Supervisar el progreso en tiempo real.
@@ -156,9 +160,9 @@ build.bat
 
 ## Aviso legal
 
-Este proyecto proporciona únicamente una interfaz gráfica para la herramienta **yt-dlp**.
+**Yt-DLP GUI** es únicamente una interfaz gráfica para la herramienta **yt-dlp**.
 
-El usuario es responsable de utilizar el software respetando la legislación aplicable y los términos de servicio de las plataformas desde las que descargue contenido. La aplicación no está diseñada para facilitar la infracción de derechos de autor. :contentReference[oaicite:5]{index=5}
+El usuario es el único responsable del uso del software y debe respetar la legislación aplicable, los derechos de autor y los términos de servicio de las plataformas desde las que descargue contenido.
 
 ---
 
@@ -166,9 +170,9 @@ El usuario es responsable de utilizar el software respetando la legislación apl
 
 Este proyecto está distribuido bajo la **Apache License 2.0**.
 
-Puede utilizar, modificar y distribuir este software de acuerdo con los términos de la licencia. Consulte el archivo **LICENSE** para obtener el texto completo.
+Consulte el archivo [LICENSE](LICENSE) para obtener el texto completo de la licencia.
 
-Copyright © 2026 Diego Martínez-Blay Díaz
+Copyright © 2026 Diego Martínez-Blay Díaz.
 
 ---
 
@@ -176,6 +180,6 @@ Copyright © 2026 Diego Martínez-Blay Díaz
 
 Este proyecto se apoya en el excelente trabajo realizado por:
 
-- yt-dlp
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp)
 - FFmpeg
 - La comunidad de Python
