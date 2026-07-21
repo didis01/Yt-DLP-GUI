@@ -120,7 +120,7 @@ chmod +x build.sh
 ./build.sh
 ```
 
-El script instala las dependencias necesarias y genera un ejecutable mediante **PyInstaller**. :contentReference[oaicite:4]{index=4}
+El script instala las dependencias necesarias y genera un ejecutable mediante **PyInstaller**.
 
 ### Windows
 
