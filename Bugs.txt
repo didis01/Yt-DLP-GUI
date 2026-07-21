@@ -1,1 +1,0 @@
-En la pestaña de video, si meto el enlace de una playlist, se descarga esta entera. 
