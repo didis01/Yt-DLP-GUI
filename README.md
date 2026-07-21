@@ -49,9 +49,9 @@ Introduce un término de búsqueda para encontrar vídeos en YouTube. Selecciona
 
 ## Capturas
 
-| Pantalla principal |
-|--------------------|
-| ![](docs/main.png) |
+| Video | Playlist | Buscar |
+|--------------------|-----------------------|----------------------|
+| ![](docs/main.png) | ![](docs/main2.png) | ![](docs/main3.png) |
 
 ---
 
