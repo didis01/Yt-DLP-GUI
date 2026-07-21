@@ -1,13 +1,11 @@
 # Yt-DLP GUI
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
-![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-success)
-![License](https://img.shields.io/badge/License-MIT-green)
-![yt-dlp](https://img.shields.io/badge/Powered%20by-yt--dlp-red)
+Una interfaz gráfica moderna para **yt-dlp**, desarrollada en Python con Tkinter, que facilita la descarga de vídeo y audio desde plataformas compatibles mediante una experiencia de usuario intuitiva, sin necesidad de utilizar la línea de comandos.
 
-Una interfaz gráfica moderna para **yt-dlp**, desarrollada en **Python** con **Tkinter**, que permite descargar vídeo y audio desde múltiples plataformas compatibles con una experiencia sencilla e intuitiva.
-
-La aplicación elimina la necesidad de utilizar la línea de comandos, ofreciendo análisis previo del contenido, selección de formatos, seguimiento del progreso en tiempo real y actualización integrada del motor de **yt-dlp**. :contentReference[oaicite:0]{index=0}
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)]()
+[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-4CAF50)]()
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![Powered by yt-dlp](https://img.shields.io/badge/Powered%20by-yt--dlp-FF0000)](https://github.com/yt-dlp/yt-dlp)
 
 ---
 
@@ -166,7 +164,11 @@ El usuario es responsable de utilizar el software respetando la legislación apl
 
 ## Licencia
 
-Distribuido bajo la licencia **MIT**.
+Este proyecto está distribuido bajo la **Apache License 2.0**.
+
+Puede utilizar, modificar y distribuir este software de acuerdo con los términos de la licencia. Consulte el archivo **LICENSE** para obtener el texto completo.
+
+Copyright © 2026 Diego Martínez-Blay Díaz
 
 ---
 
